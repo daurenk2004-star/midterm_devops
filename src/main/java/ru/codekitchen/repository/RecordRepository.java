@@ -12,5 +12,5 @@ import ru.codekitchen.entity.RecordStatus;
 public interface RecordRepository extends JpaRepository<Record, Long> {
     @Modifying
     @Query("UPDATE Record SET status = :status WHERE id= :id")
-    void update(Long id, @Param("status") RecordStatus newStatus);
+    void update(Long id, @Param("statu") RecordStatus newStatus);
 }
